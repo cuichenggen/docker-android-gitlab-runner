@@ -1,4 +1,4 @@
-FROM butomo1989/docker-android-x86-7.1.1
+FROM mandu/drone-android511
 
 ADD https://github.com/Yelp/dumb-init/releases/download/v1.0.2/dumb-init_1.0.2_amd64 /usr/bin/dumb-init
 RUN chmod +x /usr/bin/dumb-init
