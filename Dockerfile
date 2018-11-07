@@ -9,7 +9,8 @@ RUN curl -s https://packages.gitlab.com/install/repositories/runner/gitlab-ci-mu
     apt-get install -y gitlab-ci-multi-runner && \
     apt-get clean && \
     apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    gitlab-runner install --user root
     
 VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
 ENTRYPOINT ["/usr/bin/dumb-init", "gitlab-ci-multi-runner"]
